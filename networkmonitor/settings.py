@@ -3,8 +3,6 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'SECRET_KEY_USER'
-
 DEBUG = True
 
 ALLOWED_HOSTS = []
