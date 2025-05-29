@@ -10,6 +10,10 @@ ALLOWED_HOSTS = [ 'localhost',
     'network-monitoring-dashboard-ve91.onrender.com',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://network-monitoring-dashboard-ve91.onrender.com"
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
