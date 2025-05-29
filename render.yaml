@@ -3,7 +3,7 @@ services:
     name: network-monitoring-dashboard
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn yourprojectname.wsgi:application
+    startCommand: gunicorn network-monitoring-dashboard.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: settings.py
