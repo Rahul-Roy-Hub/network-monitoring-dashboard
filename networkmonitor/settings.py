@@ -66,10 +66,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-from decouple import config
+from decouple import config, UndefinedValueError
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+try:
+    SECRET_KEY = config('SECRET_KEY')
+except UndefinedValueError:
+    SECRET_KEY = 'fallback-secret-for-dev-only'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
