@@ -1,0 +1,6 @@
+<form method="post">
+  {% csrf_token %}
+  <label for="name">Device Name:</label>
+  <input type="text" name="name" id="name" value="{{ device.name }}" required />
+  <button type="submit">Update</button>
+</form>

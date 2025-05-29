@@ -1,0 +1,15 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Environment variables file
+.env
+
+# Django stuff:
+db.sqlite3
+/staticfiles/
+/media/
+
+# Virtual environment folders
+venv/
+env/
